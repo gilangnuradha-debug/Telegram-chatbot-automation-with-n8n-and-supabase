@@ -134,7 +134,7 @@ Use the Telegram bot to interact with the SGA system for common scenarios:
 
 The chatbot interaction flow is:
 
-1. User sends `/start`, then uses the bot command/interaction menu (or inline options) to choose an action.
+1. User sends `/start`, then uses the bot interaction menu (or inline options) to choose an action.
 2. User provides input (question/request).
 3. The workflow processes requests such as:
    - Asking about data stored in the database

@@ -17,11 +17,12 @@ The system enables:
 2. [Database Schema](#database-schema)
 3. [Setup Instructions](#setup-instructions)
 4. [Usage](#usage)
-5. [Database: Full Reset Warning](#database-full-reset-warning)
-6. [Troubleshooting](#troubleshooting)
-7. [License](#license)
-8. [Author](#author)
-9. [References](#references)
+5. [How It Works](#how-it-works)
+6. [Database: Full Reset Warning](#database-full-reset-warning)
+7. [Troubleshooting](#troubleshooting)
+8. [License](#license)
+9. [Author](#author)
+10. [References](#references)
 
 ---
 
@@ -124,6 +125,22 @@ Use the Telegram bot to interact with the SGA system for common scenarios:
 | **Finance Checks**               | Query current `kas_sga` balance or recent transactions           |
 | **Event Information**            | Ask about upcoming `kegiatan` or work program (`proker`) details |
 | **Automation / Reminders**       | n8n schedules automatic reminders and status updates via bot     |
+
+---
+
+## How It Works
+
+![How it Works Flow](https://github.com/user-attachments/assets/0c4c02f0-48e0-40ca-bfb4-a653addb2ed5)
+
+The chatbot interaction flow is:
+
+1. User sends `/start`, then uses the bot interaction menu (or inline options) to choose an action.
+2. User provides input (question/request).
+3. The workflow processes requests such as:
+   - Asking about data stored in the database
+   - Generating spreadsheet-style outputs when needed (e.g., monthly ranking or attendance recap)
+4. The system queries the database and returns output to the user.
+5. If input is not found in the database or the question is outside the supported scope, the bot replies with guidance to rephrase the request or choose another supported task.
 
 ---
 
